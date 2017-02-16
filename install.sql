@@ -159,8 +159,7 @@ CREATE TABLE orders (
     total numeric(35,2) NOT NULL,
     contents text,
     address text,
-    phone varchar(18),
-    completed boolean
+    phone varchar(18)
 );
 
 -- Hard restrict access to view/update/insert cartlines (remember doesnt affect views)
