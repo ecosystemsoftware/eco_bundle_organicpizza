@@ -1,0 +1,130 @@
+[{
+        "type": "fields",
+        "title": "Main",
+        "fields": [{
+                "name": "id",
+                "label": "SKU"
+            },
+            {
+                "name": "name",
+                "label": "Name",
+                "edit": true
+            },
+            {
+                "name": "image",
+                "label": "Image",
+                "edit": true
+            }
+        ]
+    },
+    {
+        "title": "Financial",
+        "isHorizontal": true,
+        "fields": [{
+                "name": "totalcost",
+                "label": "Cost"
+            },
+            {
+                "name": "price",
+                "label": "RRP"
+            }
+        ]
+    },
+    {
+        "type": "list",
+        "restrictField": "pizza",
+        "table": "toppingsperpizza_info",
+        "schema": "eco_bundle_organicpizza",
+        "title": "Toppings on This Pizza",
+        "confirmLineActions": true,
+        "params": {
+            "orderBy": "id"
+        },
+        "dataColumns": [{
+                "name": "topping",
+                "label": "Our Ref"
+            },
+            {
+                "name": "name",
+                "label": "Name"
+            },
+            {
+                "name": "servings",
+                "label": "Servings on this pizza",
+                "edit": {
+                    "type": "number"
+                }
+            },
+            {
+                "name": "costperserving",
+                "label": "Cost Per Serving"
+            }
+        ],
+        "actionColumns": [{
+            "label": "Remove from Pizza",
+            "icon": "delete",
+            "actionFunction": "deleteLine"
+        }]
+    },
+    {
+        "type": "list",
+        "table": "toppings_info",
+        "schema": "eco_bundle_organicpizza",
+        "title": "Add Toppings to Pizza",
+        "params": {
+            "orderBy": "id"
+        },
+        "dataColumns": [{
+                "name": "id",
+                "label": "Our Ref"
+            },
+            {
+                "name": "name",
+                "label": "Name",
+                "edit": {
+                    "type": "text"
+                }
+            },
+            {
+                "name": "costperserving",
+                "label": "Cost Per Serving"
+            }
+        ],
+        "actionColumns": [{
+            "label": "Add to Pizza",
+            "icon": "add-circle",
+            "actionFunction": "addToppingToPizza"
+        }]
+    },
+    {
+        "title": "Nutritional Info",
+        "isHorizontal": true,
+        "fields": [{
+                "name": "totalfat",
+                "label": "Fat"
+            },
+            {
+                "name": "totalcarbs",
+                "label": "Carbs"
+            },
+            {
+                "name": "totalprotien",
+                "label": "Protien"
+            }
+        ]
+    },
+    {
+        "title": "Website",
+        "fields": [{
+                "name": "slug",
+                "label": "Slug",
+                "edit": true
+            },
+            {
+                "name": "description",
+                "label": "Description",
+                "edit": true
+            }
+        ]
+    }
+]

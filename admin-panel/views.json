@@ -1,0 +1,32 @@
+{
+    "pizzas_info": {
+        "list": [{
+            "name": "pizzasDefault",
+            "description": "Our Pizzas"
+        }],
+        "record": [{
+            "name": "pizzaDefault",
+            "description": "Pizza Form"
+        }]
+    },
+    "toppings_info": {
+        "list": [{
+            "name": "toppingsDefault",
+            "description": "Our Toppings"
+        }],
+        "record": [{
+            "name": "toppingDefault",
+            "description": "Topping Form"
+        }]
+    },
+    "orders": {
+        "list": [{
+            "name": "ordersDefault",
+            "description": "Orders List"
+        }],
+        "record": [{
+            "name": "orderDefault",
+            "description": "Order Form"
+        }]
+    }
+}

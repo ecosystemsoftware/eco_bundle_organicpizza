@@ -1,0 +1,49 @@
+[
+    {
+        "type": "list",
+        "title": "Orders",
+        "allowSort": true,
+        "allowSelect": true,
+        "confirmLineActions": true,
+        "dataColumns": [
+            {
+                "name": "id",
+                "label": "Order No.",
+                "linkSchema": "eco_bundle_organicpizza",
+                "linkTable": "orders",
+                "linkTo": "id",
+                "linkView": "orderDefault"
+            },
+            {
+                "name": "created",
+                "label": "Placed"
+            },
+            {
+                "name": "total",
+                "label": "Order Total"
+            },
+            {
+                "name": "contents",
+                "label": "Pizzas Ordered"
+            },
+            {
+                "name": "phone",
+                "label": "Phone"
+            }
+        ],
+        "actionColumns": [
+            {
+                "label": "Complete Order",
+                "icon": "check",
+                "actionFunction": "deleteLine"
+            }
+        ],
+        "bulkActions": [
+            {
+                "label": "Complete Orders",
+                "confirm": true,
+                "actionFunction": "deleteLine"
+            }
+        ]
+    }
+]

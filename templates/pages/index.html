@@ -1,0 +1,18 @@
+{{ template "eco_bundle_organicpizza/header-top.html" . }} 
+{{ template "eco_bundle_organicpizza/header-bottom.html" . }} 
+{{ template "eco_bundle_organicpizza/cart.html" . }}
+
+{{ $table := .table }}
+
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">Welcome to The Organic Pizza Co.</h1>
+            <h2 class="subtitle">
+                We're proud of our amazing <a href="/site/pizzas-info">pizzas</a> and take great care selecting the highest quality <a href="/site/toppings-info">organic toppings</a>.
+            </h2>
+        </div>
+    </div>
+</section>
+
+{{ template "eco_bundle_organicpizza/footer.html" . }}

@@ -1,0 +1,20 @@
+{{define "eco_bundle_organicpizza/cartlines_customer-list.html" }}
+{{ $schema := .schema }}
+ 
+ {{ if .records }}
+<div class="columns is-multiline">
+    {{ range .records }}
+    <div class="column is-2">
+        <button class="delete is-small" onClick="removeFromList('{{ .id }}')"></button>
+        <img src="/images/{{ $schema }}/{{ .image }}?width=300" />
+        <h1 class="title is-4">{{ .title }}</h1>
+        <p class="subtitle is-6"><strong>{{ .qty_ordered}}</strong> x <strong>£{{ printf "%.2f" .price }}</strong> = <strong>£{{ printf "%.2f" .total_price }}</strong></p>
+    </div>
+    {{ end }}
+</div>
+
+{{ else }}
+<div class="subtitle has-text-centered">Add some pizzas to build your order...</div>
+{{ end }}
+
+{{ end }}

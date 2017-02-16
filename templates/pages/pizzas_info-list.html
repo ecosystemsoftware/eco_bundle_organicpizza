@@ -1,0 +1,30 @@
+{{define "eco_bundle_organicpizza/pizzas_info-list.html" }}
+{{ template "eco_bundle_organicpizza/header-top.html" . }} {{ template "eco_bundle_organicpizza/header-bottom.html" . }}
+{{ $table := .table }} {{ $schema := .schema }}
+
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">Our Organic Pizzas</h1>
+            <h2 class="subtitle">
+                Here's a list of all our pizzas...
+            </h2>
+            <p>All made with our fresh, organic, hand-tossed dough and baked in our wood-burning clay oven.</p>
+        </div>
+        <hr />
+        <div class="columns is-multiline">
+            {{ range .records }}
+            <div class="column is-one-quarter">
+                <a href="/site/{{ $schema }}/{{ $table }}/{{ .slug }}"><img src="/images/{{ $schema }}/{{ .image }}?width=400" /></a>
+                <h1 class="title is-4"><a href="/site/{{ $schema }}/{{ $table }}/{{ .slug }}">{{ .name }}</a></h1>
+                <h2 class="subtitle">£{{ printf "%.2f" .price }}</h2>
+                <button class="button is-primary" onClick="addToList('{{ .id }}')">Add to Order</button>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ template "eco_bundle_organicpizza/footer.html" . }}
+
+{{ end }}

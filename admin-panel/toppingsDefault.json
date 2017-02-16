@@ -1,0 +1,47 @@
+[{
+    "type": "list",
+    "title": "Toppings",
+    "newRecordLinkView": "toppingDefault",
+    "showImage": true,
+    "dataColumns": [{
+            "name": "id",
+            "label": "Our Ref",
+            "linkSchema": "eco_bundle_organicpizza",
+            "linkTable": "toppings_info",
+            "linkTo": "id",
+            "linkView": "toppingDefault"
+
+        },
+        {
+            "name": "name",
+            "label": "Name",
+            "edit": {
+                "type": "text"
+            }
+        },
+        {
+            "name": "supplierref",
+            "label": "Supplier Ref"
+        },
+        {
+            "name": "suppliername",
+            "label": "Supplier"
+        },
+        {
+            "name": "packsizekg",
+            "label": "Pack Size (KG)"
+        },
+        {
+            "name": "packprice",
+            "label": "Pack Price"
+        },
+        {
+            "name": "costperserving",
+            "label": "Cost Per Serving"
+        }
+    ],
+    "requiredFieldsForNew": [{
+        "name": "id",
+        "label": "Our Topping Ref"
+    }]
+}]

@@ -1,0 +1,62 @@
+{{define "eco_bundle_organicpizza/pizzas_info-single.html" }}
+
+{{ template "eco_bundle_organicpizza/header-top.html" . }} 
+<title>{{ .record.title }}</title>
+<meta name="description" content="{{ .record.description }}"> {{ template "eco_bundle_organicpizza/header-bottom.html" . }} 
+{{ template "eco_bundle_organicpizza/cart.html" . }}
+
+{{ $schema := .schema }}
+
+
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">Pizza <strong>{{ .record.name }}</strong></h1>
+        </div>
+
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <img src="/images/{{ $schema }}/{{ .record.image }}?width=1200" />
+            </div>
+            <div class="column">
+                <p class="title is-3">£{{ printf "%.2f" .record.price }}</p>
+                <button class="button is-primary" onClick="addToList('{{ .record.id }}')">Add to Order</button>
+                <hr />
+                <h3 class="title">Toppings on this pizza</h3>
+                <p>Click on topping for description and nutritional details</p>
+                <div id="toppings"></div>
+                <script type="text/javascript">
+                    $(function() {
+                        loadToppings('{{ .record.id }}');
+                    });
+                </script>
+                <hr />
+                <h2 class="title is-4">Nutritional Information</h2>
+                <table class="table">
+                    <tr>
+                        <th>Fat</th>
+                        <td>{{ .record.totalfat }}</td>
+                    </tr>
+                    <tr>
+                        <th>Carbohydrates</th>
+                        <td>{{ .record.totalcarbs }}</td>
+                    </tr>
+                    <tr>
+                        <th>Protien</th>
+                        <td>{{ .record.totalprotien }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <h3 class="title is-4">Chef Mario says...</h3>
+        <p class="subtitle">"{{ .record.description }}"</p>
+
+
+    </div>
+</section>
+
+
+{{ template "eco_bundle_organicpizza/footer.html" . }}
+
+{{ end }}
