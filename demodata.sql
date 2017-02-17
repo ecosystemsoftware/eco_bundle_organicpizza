@@ -29,7 +29,6 @@ INSERT INTO toppings (id, name, description, supplierref, suppliername, supplier
 INSERT INTO toppings (id, name, description, supplierref, suppliername, supplierlocation, packsizekg, servingsizeg, packprice, image, fatper100, carbsper100, protienper100, slug) VALUES ('tuna', 'Albacore Tuna', 'Stunning white tuna from the waters around the Italian coast.', '34t34yu', 'Tunio', 'Italy', 2.50, 90, 13.50, 'top-tuna.jpg', 5.00, 1.00, 22.00, 'tuna');
 INSERT INTO toppings (id, name, description, supplierref, suppliername, supplierlocation, packsizekg, servingsizeg, packprice, image, fatper100, carbsper100, protienper100, slug) VALUES ('greenolives', 'Spanish Green Olives', 'New season Camporeal olives in a garlic marinade.', 'green323', 'Olivio', 'Spain', 3.00, 50, 9.80, 'top-green.jpg', 20.00, 1.00, 5.00, 'greenolives');
 INSERT INTO toppings (id, name, description, supplierref, suppliername, supplierlocation, packsizekg, servingsizeg, packprice, image, fatper100, carbsper100, protienper100, slug) VALUES ('blackolives', 'Black Olives for me', 'Our black olives are served stone-in for the authentic experience.', 'th56h', 'Olivio', 'Spain', 4.00, 30, 12.50, 'top-black.jpg', 20.00, 11.00, 1.00, 'blackolives');
-INSERT INTO toppings (id, name, description, supplierref, suppliername, supplierlocation, packsizekg, servingsizeg, packprice, image, fatper100, carbsper100, protienper100, slug) VALUES ('peas', 'These are peas', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Data for Name: toppingsperpizza; Type: TABLE DATA; Schema: public; Owner: jon
@@ -71,7 +70,6 @@ INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'mt
 INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'mtfs', 'ham', 1);
 INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'marg', 'greenolives', 1);
 INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'marg', 'blackolives', 2);
-INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'marg', 'peas', 1);
 
 --
 -- Data for Name: web_categories; Type: TABLE DATA; Schema: public; Owner: jon

@@ -1,5 +1,4 @@
 {{define "eco_bundle_organicpizza/header-bottom.html" }}
-{{ $schema := .schema }}
 
 </head>
 
@@ -25,7 +24,7 @@
         <div id="main-nav" class="nav-right nav-menu">
 
             <span class="nav-item">
-                <a href="/site/{{ $schema }}/pizzas-info">
+                <a href="/site/eco_bundle_organicpizza/pizzas-info">
                     <span><strong>All Pizzas</strong></span>
             </a>
             </span>
@@ -33,7 +32,7 @@
             {{ template "eco_bundle_organicpizza/menu.html" .site.BuildMenu `` }}
 
             <span class="nav-item">
-                <a href="/site/{{ $schema }}/toppings-info">
+                <a href="/site/eco_bundle_organicpizza/toppings-info">
                     <span><strong>Toppings</strong></span>
             </a>
             </span>
