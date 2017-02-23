@@ -3,10 +3,6 @@
 // to get you started with EcoSystem ///////////
 ////////////////////////////////////////////////
 
-var EcoSystem = {
-    "apiRoot": "http://localhost:3000"
-};
-
 //Toggles the main navigation
 function toggleMainNav() {
     document.getElementById("main-nav").classList.toggle("is-active");
