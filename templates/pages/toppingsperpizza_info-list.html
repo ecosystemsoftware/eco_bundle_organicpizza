@@ -1,9 +1,0 @@
-{{define "eco_bundle_organicpizza/toppingsperpizza_info-list.html" }}
-{{ $schema := .schema }}
-
-<ul>
-    {{ range .records }}
-    <li><a href="/site/{{ $schema }}/toppings_info/{{ .slug }}">{{ .name }}</a></li>
-    {{ end }}
-</ul>
-{{ end }}

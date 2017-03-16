@@ -70,13 +70,3 @@ INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'mt
 INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'mtfs', 'ham', 1);
 INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'marg', 'greenolives', 1);
 INSERT INTO toppingsperpizza (id, pizza, topping, servings) VALUES (DEFAULT, 'marg', 'blackolives', 2);
-
---
--- Data for Name: web_categories; Type: TABLE DATA; Schema: public; Owner: jon
---
-
-INSERT INTO web_categories (id, title, image, description, subtitle, parent, priority, bundle) VALUES ('plain', 'Plain', NULL, NULL, NULL, NULL, NULL, 'eco_bundle_organicpizza');
-INSERT INTO web_categories (id, title, image, description, subtitle, parent, priority, bundle) VALUES ('mixed', 'Mixed', NULL, NULL, NULL, NULL, NULL,'eco_bundle_organicpizza');
-INSERT INTO web_categories (id, title, image, description, subtitle, parent, priority, bundle) VALUES ('vegetarian', 'Vegetarian', NULL, NULL, NULL, NULL, NULL,'eco_bundle_organicpizza');
-INSERT INTO web_categories (id, title, image, description, subtitle, parent, priority, bundle) VALUES ('seafood', 'Seafood', NULL, NULL, NULL, NULL, NULL,'eco_bundle_organicpizza');
-INSERT INTO web_categories (id, title, image, description, subtitle, parent, priority, bundle) VALUES ('meat', 'Meat', NULL, NULL, NULL, NULL, NULL,'eco_bundle_organicpizza');

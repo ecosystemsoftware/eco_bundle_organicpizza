@@ -35,8 +35,6 @@ CREATE VIEW toppings_info AS
     (100 / toppings.servingsizeg) * toppings.protienper100 as protienperserving
     FROM toppings;
 
--- Public web pages
-GRANT SELECT on TABLE toppings_info TO WEB;
 
 CREATE TABLE toppingsperpizza (
     id serial PRIMARY KEY,
@@ -54,8 +52,6 @@ CREATE VIEW toppingsperpizza_info AS
     LEFT JOIN toppings_info
     ON toppingsperpizza.topping = toppings_info.id;
 
--- Public web pages
-GRANT SELECT on TABLE toppingsperpizza_info TO WEB;
 
 CREATE VIEW pizzas_info AS
     SELECT pizzas.*,
@@ -74,7 +70,7 @@ CREATE VIEW pizzas_info AS
     GROUP BY pizzas.id;
 
 -- Public web pages and anon(for functions)
-GRANT SELECT on TABLE pizzas_info TO web, anon;
+GRANT SELECT on TABLE pizzas_info TO anon;
 
 CREATE TABLE cartlines (
     id serial PRIMARY KEY,
